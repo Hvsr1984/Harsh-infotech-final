@@ -1,0 +1,17 @@
+{
+  "name": "harsh-infotech",
+  "version": "1.0.0",
+  "description": "HARSH INFOTECH website with premium UI enhancements and Express backend.",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js"
+  },
+  "author": "HARSH INFOTECH",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0"
+  }
+}
