@@ -1,4 +1,4 @@
-const navToggle = document.querySelector('.nav-toggle');
+﻿const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('.main-nav');
 const navLinks = document.querySelectorAll('.main-nav a');
 const header = document.querySelector('header');
@@ -86,15 +86,11 @@ if (statisticsSection && counters.length) {
   counterObserver.observe(statisticsSection);
 }
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   if (preloader) {
     preloader.classList.add('loaded');
     setTimeout(() => {
       preloader.remove();
-    }, 700);
-  }
-
-  if (window.AOS) {
-    AOS.init({ duration: 800, offset: 120, once: true });
+    }, 500);
   }
 });
