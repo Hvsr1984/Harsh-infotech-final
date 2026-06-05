@@ -588,10 +588,155 @@ section h2 {
     visibility: visible;
     opacity: 1;
   }
+
+  .float-whatsapp {
+    display: inline-flex;
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+    font-size: 1.8rem;
+    z-index: 999;
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 540px) {
   .main-nav {
     inset: 72px 0 auto 0;
+  }
+
+  header {
+    padding: 16px 4%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding: 0 5% 3rem;
+    align-items: flex-end;
+  }
+
+  .hero-content {
+    padding: 28px 20px;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+  }
+
+  .hero-btn,
+  .owner a,
+  .whatsapp-btn {
+    width: 100%;
+    padding: 14px 18px;
+    text-align: center;
+  }
+
+  .why-choose,
+  .sizes,
+  .statistics,
+  .reviews,
+  .contact,
+  .owner {
+    padding: 60px 5%;
+  }
+
+  .card img {
+    min-height: 200px;
+  }
+
+  .card h3 {
+    font-size: 1.15rem;
+  }
+
+  .stat-card {
+    padding: 24px 18px;
+  }
+
+  .page-banner {
+    padding: 80px 20px;
+  }
+
+  .page-banner h1 {
+    font-size: 2.7rem;
+  }
+
+  .page-banner p {
+    font-size: 1rem;
+  }
+
+  .contact-box {
+    padding: 28px 22px;
+  }
+
+  .map iframe {
+    min-height: 280px;
+  }
+
+  .footer-grid {
+    gap: 22px;
+  }
+
+  .main-nav {
+    padding: 20px 8%;
+  }
+
+  .main-nav a {
+    padding: 14px 0;
+  }
+
+  .float-whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 55px;
+    height: 55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+    font-size: 1.8rem;
+    z-index: 999;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p,
+  .page-banner p,
+  .owner p {
+    font-size: 0.98rem;
+  }
+
+  .why-grid,
+  .review-grid,
+  .stat-grid,
+  .grid {
+    gap: 18px;
   }
 }
