@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ShoppingBag, Eye, ShieldCheck, Truck, Wrench, HeartHandshake, HelpCircle, Sparkles, Award, Tv, Plug } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export interface TVItem {
   id: string;
@@ -156,6 +157,7 @@ export const tvCatalogData: TVItem[] = [
 export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const categories = ['All', 'Compact', 'Full HD', 'Ultra 4K'];
+  const navigate = useNavigate();
 
   const filteredTVs = selectedCategory === 'All'
     ? tvCatalogData
@@ -422,25 +424,25 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
               icon: <Wrench className="w-5 h-5 text-accent" />,
               title: "TV Repair Service",
               desc: "Chip-level troubleshooting & screen repairs",
-              link: "#services",
+              link: "/services",
             },
             {
               icon: <Tv className="w-5 h-5 text-accent" />,
               title: "Installation Service",
               desc: "Secure wall mounting & cable routing",
-              link: "#why-choose",
+              link: "/services",
             },
             {
               icon: <Plug className="w-5 h-5 text-accent" />,
               title: "TV Accessories",
               desc: "Premium HDMI cables, soundbars & mounts",
-              link: "#wholesale-b2b",
+              link: "/contact",
             },
             {
               icon: <ShieldCheck className="w-5 h-5 text-accent" />,
               title: "Maintenance Support",
               desc: "Direct brand-level hardware warranty support",
-              link: "#why-choose",
+              link: "/services",
             },
           ].map((item, idx) => (
             <motion.div
@@ -452,10 +454,7 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
               whileHover={{ y: -4 }}
               className="bg-white border border-accent/10 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-accent/35 transition-all duration-300 cursor-pointer flex flex-col items-center text-center group relative overflow-hidden select-none"
               onClick={() => {
-                const element = document.getElementById(item.link.replace('#', ''));
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
+                navigate(item.link);
               }}
             >
               {/* Top Accent line */}
@@ -476,8 +475,8 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
                 {item.desc}
               </p>
 
-              {/* Interactive subtle hover arrow */}
-              <div className="text-[10px] font-poppins font-bold text-accent opacity-0 group-hover:opacity-100 mt-3 transform translate-y-1 group-hover:translate-y-0 transition-all duration-300 flex items-center space-x-1">
+              {/* Interactive subtle hover arrow (always visible at 70% opacity, glows to 100% and shifts on hover) */}
+              <div className="text-[10px] font-poppins font-bold text-accent mt-3.5 transform translate-y-0 group-hover:translate-x-1 transition-all duration-300 flex items-center space-x-1.5 opacity-70 group-hover:opacity-100">
                 <span>View Details</span>
                 <span>→</span>
               </div>
