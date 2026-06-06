@@ -255,7 +255,7 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
                 {/* WhatsApp Action Button */}
                 <div className="border-t border-accent/5 pt-4 flex items-center justify-between">
                   <span className="text-[10px] text-textMuted font-bold uppercase tracking-wider">
-                    Jaipur Delivery
+                    Doorstep Delivery
                   </span>
                   <button
                     onClick={(e) => handleEnquire(e, tv)}

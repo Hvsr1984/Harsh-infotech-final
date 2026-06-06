@@ -48,7 +48,7 @@ export default function Services() {
       points: [
         'Special B2B discounted pricing tiers',
         'Sizes range from 18" up to 80" displays',
-        'Fast Jaipur transportation & bulk testing'
+        'Fast transportation & bulk testing'
       ]
     },
     {

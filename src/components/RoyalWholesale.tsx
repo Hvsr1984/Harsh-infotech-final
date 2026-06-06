@@ -24,7 +24,7 @@ const wholesalePackages: WholesalePackage[] = [
       'Custom smart TV sizes (32" - 55")',
       'Heavy-duty tilt wall mounts included',
       'Bulk account setting (Netflix, Hotstar)',
-      'Free Jaipur transport & layout install'
+      'Free transport & layout install'
     ],
     description: 'Designed exclusively for Jaipur hotels, resorts, and modern guest houses. Transform guest rooms with luxury smart displays.',
     whatsappMsg: 'Hello Jitender Ji, I want details regarding the "Maharajah Hotel Display Pack" for commercial installation.'

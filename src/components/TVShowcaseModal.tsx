@@ -12,7 +12,7 @@ export default function TVShowcaseModal({ tv, onClose }: TVShowcaseModalProps) {
   // Generate WhatsApp message automatically
   const whatsappNumber = '919351432535';
   const whatsappMessage = encodeURIComponent(
-    `Hello Jitender Ji,\n\nI visited your Harsh Infotech TV website and want to get a price quote for the "${tv.name}" (${tv.size}) model.\n\nPlease share the retail and wholesale pricing details for delivery in Jaipur.`
+    `Hello Jitender Ji,\n\nI visited your Harsh Infotech TV website and want to get a price quote for the "${tv.name}" (${tv.size}) model.\n\nPlease share the retail and wholesale pricing details for delivery.`
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -97,7 +97,7 @@ export default function TVShowcaseModal({ tv, onClose }: TVShowcaseModalProps) {
             <div className="mt-6 space-y-2">
               <div className="flex items-center space-x-2.5 text-xs text-textMuted">
                 <Truck className="w-4 h-4 text-accent" />
-                <span>Free Doorstep Delivery & Setup in Jaipur</span>
+                <span>Free Doorstep Delivery & Setup</span>
               </div>
               <div className="flex items-center space-x-2.5 text-xs text-textMuted">
                 <ShieldCheck className="w-4 h-4 text-accent" />

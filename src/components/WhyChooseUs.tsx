@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
     {
       icon: <Truck className="w-5 h-5 text-accent" />,
       title: 'Home Delivery & Setup',
-      description: 'Fast doorstep delivery across Jaipur with trusted protective packaging and direct setup.'
+      description: 'Fast doorstep delivery with trusted protective packaging and direct setup.'
     },
     {
       icon: <ShoppingBag className="w-5 h-5 text-accent" />,
@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
                     <span className="text-[7px] sm:text-[9px] text-white/50 uppercase font-bold tracking-wider mt-0.5 sm:mt-1 block">Sizes</span>
                   </div>
                   <div>
-                    <span className="text-white font-extrabold text-xs sm:text-sm block leading-none">Jaipur</span>
+                    <span className="text-white font-extrabold text-xs sm:text-sm block leading-none">Home</span>
                     <span className="text-[7px] sm:text-[9px] text-white/50 uppercase font-bold tracking-wider mt-0.5 sm:mt-1 block">Delivery</span>
                   </div>
                 </div>
