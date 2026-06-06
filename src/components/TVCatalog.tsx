@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Eye, ShieldCheck, Truck, Wrench, HeartHandshake, HelpCircle, Sparkles, Award } from 'lucide-react';
+import { ShoppingBag, Eye, ShieldCheck, Truck, Wrench, HeartHandshake, HelpCircle, Sparkles, Award, Tv, Plug } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export interface TVItem {
@@ -415,27 +415,74 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
 
         </div>
 
-        {/* TV Repair / Installation Quick Links Icons spacing */}
-        <div className="border-t border-accent/10 mt-12 pt-4"></div>
+        {/* TV Repair / Installation Quick Links Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-5xl mx-auto">
+          {[
+            {
+              icon: <Wrench className="w-5 h-5 text-accent" />,
+              title: "TV Repair Service",
+              desc: "Chip-level troubleshooting & screen repairs",
+              link: "#services",
+            },
+            {
+              icon: <Tv className="w-5 h-5 text-accent" />,
+              title: "Installation Service",
+              desc: "Secure wall mounting & cable routing",
+              link: "#why-choose",
+            },
+            {
+              icon: <Plug className="w-5 h-5 text-accent" />,
+              title: "TV Accessories",
+              desc: "Premium HDMI cables, soundbars & mounts",
+              link: "#wholesale-b2b",
+            },
+            {
+              icon: <ShieldCheck className="w-5 h-5 text-accent" />,
+              title: "Maintenance Support",
+              desc: "Direct brand-level hardware warranty support",
+              link: "#why-choose",
+            },
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.05 }}
+              whileHover={{ y: -4 }}
+              className="bg-white border border-accent/10 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-accent/35 transition-all duration-300 cursor-pointer flex flex-col items-center text-center group relative overflow-hidden select-none"
+              onClick={() => {
+                const element = document.getElementById(item.link.replace('#', ''));
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              {/* Top Accent line */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              
+              {/* Icon Container with glowing background */}
+              <div className="w-10 h-10 rounded-xl bg-accent/5 border border-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/15 group-hover:scale-110 transition-all duration-300">
+                {item.icon}
+              </div>
 
-        {/* TV Repair / Installation Quick Links Icons */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 text-center select-none max-w-4xl mx-auto">
-          <div className="bg-white border border-accent/5 rounded-xl p-4 flex flex-col items-center hover:border-accent/25 transition-all duration-300">
-            <span className="text-2xl mb-2">🔧</span>
-            <span className="text-textDark font-poppins font-bold text-[11px] uppercase tracking-wider">TV Repair Service</span>
-          </div>
-          <div className="bg-white border border-accent/5 rounded-xl p-4 flex flex-col items-center hover:border-accent/25 transition-all duration-300">
-            <span className="text-2xl mb-2">📺</span>
-            <span className="text-textDark font-poppins font-bold text-[11px] uppercase tracking-wider">Installation Service</span>
-          </div>
-          <div className="bg-white border border-accent/5 rounded-xl p-4 flex flex-col items-center hover:border-accent/25 transition-all duration-300">
-            <span className="text-2xl mb-2">🔌</span>
-            <span className="text-textDark font-poppins font-bold text-[11px] uppercase tracking-wider">TV Accessories</span>
-          </div>
-          <div className="bg-white border border-accent/5 rounded-xl p-4 flex flex-col items-center hover:border-accent/25 transition-all duration-300">
-            <span className="text-2xl mb-2">🛡️</span>
-            <span className="text-textDark font-poppins font-bold text-[11px] uppercase tracking-wider">Maintenance Support</span>
-          </div>
+              {/* Title */}
+              <span className="text-textDark font-poppins font-bold text-xs uppercase tracking-wider group-hover:text-accent transition-colors duration-200">
+                {item.title}
+              </span>
+              
+              {/* Description */}
+              <p className="text-textMuted text-[10px] font-medium mt-1.5 leading-normal max-w-[170px]">
+                {item.desc}
+              </p>
+
+              {/* Interactive subtle hover arrow */}
+              <div className="text-[10px] font-poppins font-bold text-accent opacity-0 group-hover:opacity-100 mt-3 transform translate-y-1 group-hover:translate-y-0 transition-all duration-300 flex items-center space-x-1">
+                <span>View Details</span>
+                <span>→</span>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
       </div>
