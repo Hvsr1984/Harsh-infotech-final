@@ -216,7 +216,8 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.04 }}
                 whileHover={{ y: -4 }}
-                className="bg-white border border-accent/10 rounded-2xl p-5 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+                whileTap={{ scale: 0.98 }}
+                className="bg-white border border-accent/10 rounded-2xl p-4 sm:p-5 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
                 onClick={() => onSelectTV(tv)}
               >
                 <div>
@@ -418,7 +419,7 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
         </div>
 
         {/* TV Repair / Installation Quick Links Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-16 max-w-5xl mx-auto px-4 sm:px-0">
           {[
             {
               icon: <Wrench className="w-5 h-5 text-accent" />,
@@ -452,7 +453,8 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               whileHover={{ y: -4 }}
-              className="bg-white border border-accent/10 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-accent/35 transition-all duration-300 cursor-pointer flex flex-col items-center text-center group relative overflow-hidden select-none"
+              whileTap={{ scale: 0.98 }}
+              className="bg-white border border-accent/10 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-accent/35 transition-all duration-300 cursor-pointer flex flex-col items-center text-center group relative overflow-hidden select-none"
               onClick={() => {
                 navigate(item.link);
               }}
@@ -461,22 +463,22 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               {/* Icon Container with glowing background */}
-              <div className="w-10 h-10 rounded-xl bg-accent/5 border border-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/15 group-hover:scale-110 transition-all duration-300">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-accent/5 border border-accent/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-accent/15 group-hover:scale-110 transition-all duration-300">
                 {item.icon}
               </div>
 
               {/* Title */}
-              <span className="text-textDark font-poppins font-bold text-xs uppercase tracking-wider group-hover:text-accent transition-colors duration-200">
+              <span className="text-textDark font-poppins font-bold text-[10px] sm:text-xs uppercase tracking-wider group-hover:text-accent transition-colors duration-200 leading-tight">
                 {item.title}
               </span>
               
               {/* Description */}
-              <p className="text-textMuted text-[10px] font-medium mt-1.5 leading-normal max-w-[170px]">
+              <p className="text-textMuted text-[9px] sm:text-[10px] font-medium mt-1 sm:mt-1.5 leading-normal max-w-[170px] flex-grow">
                 {item.desc}
               </p>
 
               {/* Interactive subtle hover arrow (always visible at 70% opacity, glows to 100% and shifts on hover) */}
-              <div className="text-[10px] font-poppins font-bold text-accent mt-3.5 transform translate-y-0 group-hover:translate-x-1 transition-all duration-300 flex items-center space-x-1.5 opacity-70 group-hover:opacity-100">
+              <div className="text-[9px] sm:text-[10px] font-poppins font-bold text-accent mt-2.5 sm:mt-3.5 transform translate-y-0 group-hover:translate-x-1 transition-all duration-300 flex items-center space-x-1 sm:space-x-1.5 opacity-70 group-hover:opacity-100">
                 <span>View Details</span>
                 <span>→</span>
               </div>
