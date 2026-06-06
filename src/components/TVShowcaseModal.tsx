@@ -49,7 +49,7 @@ export default function TVShowcaseModal({ tv, onClose }: TVShowcaseModalProps) {
           <div className="absolute w-44 h-44 bg-accent/5 blur-[90px] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
           
           <img
-            src={tv.image}
+            src={import.meta.env.BASE_URL + tv.image}
             alt={tv.name}
             className="max-h-56 md:max-h-64 object-contain filter drop-shadow-[0_12px_28px_rgba(0,0,0,0.12)] z-10 animate-none"
           />

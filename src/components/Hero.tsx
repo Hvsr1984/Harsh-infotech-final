@@ -123,7 +123,7 @@ export default function Hero({ onExploreCatalog, onBookRepair }: HeroProps) {
 
                 {/* Hawa Mahal Sunset TV Mockup display image */}
                 <motion.img
-                  src="/hero.png"
+                  src={import.meta.env.BASE_URL + 'hero.png'}
                   alt="Premium TV Hawa Mahal Sunset display"
                   initial={{ opacity: 0, scale: 1.08 }}
                   animate={isTvOn ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.08 }}

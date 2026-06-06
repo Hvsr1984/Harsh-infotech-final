@@ -26,7 +26,7 @@ export const tvCatalogData: TVItem[] = [
     name: '18 Inch LED TV',
     size: '18"',
     category: 'Compact',
-    image: '/18.png',
+    image: '18.png',
     resolution: 'HD Ready (1366x768)',
     panelType: 'A+ Grade IPS Panel',
     smartOS: 'Standard TV (Non-Smart)',
@@ -39,7 +39,7 @@ export const tvCatalogData: TVItem[] = [
     name: '24 Inch LED TV',
     size: '24"',
     category: 'Compact',
-    image: '/24.png',
+    image: '24.png',
     resolution: 'HD Ready (1366x768)',
     panelType: 'A+ Grade IPS Panel',
     smartOS: 'Standard / Optional Android OS',
@@ -52,7 +52,7 @@ export const tvCatalogData: TVItem[] = [
     name: '32 Inch Smart TV',
     size: '32"',
     category: 'Compact',
-    image: '/32.png',
+    image: '32.png',
     resolution: 'HD Ready (1366x768)',
     panelType: 'IPS Bezel-Less Panel',
     smartOS: 'Android TV OS (Netflix, Prime, YT)',
@@ -65,7 +65,7 @@ export const tvCatalogData: TVItem[] = [
     name: '40 Inch Smart TV',
     size: '40"',
     category: 'Full HD',
-    image: '/40.png',
+    image: '40.png',
     resolution: 'Full HD (1920x1080)',
     panelType: 'IPS Bezel-Less Panel',
     smartOS: 'Android TV OS (Play Store, Voice Assistant)',
@@ -78,7 +78,7 @@ export const tvCatalogData: TVItem[] = [
     name: '42/43 Inch Smart TV',
     size: '43"',
     category: 'Full HD',
-    image: '/42.png',
+    image: '42.png',
     resolution: 'Full HD (1920x1080)',
     panelType: 'Ultra-Bright IPS Display',
     smartOS: 'Android TV OS (Chromecast built-in)',
@@ -91,7 +91,7 @@ export const tvCatalogData: TVItem[] = [
     name: '50 Inch Smart TV',
     size: '50"',
     category: 'Ultra 4K',
-    image: '/50.png',
+    image: '50.png',
     resolution: '4K Ultra HD (3840x2160)',
     panelType: '4K HDR10+ VA Panel',
     smartOS: 'Google TV UI with Play Store',
@@ -104,7 +104,7 @@ export const tvCatalogData: TVItem[] = [
     name: '55 Inch Smart TV',
     size: '55"',
     category: 'Ultra 4K',
-    image: '/55.png',
+    image: '55.png',
     resolution: '4K Ultra HD (3840x2160)',
     panelType: '4K QLED Bezel-Less',
     smartOS: 'Google TV UI with Smart Remote',
@@ -117,7 +117,7 @@ export const tvCatalogData: TVItem[] = [
     name: '65 Inch Smart TV',
     size: '65"',
     category: 'Ultra 4K',
-    image: '/65.png',
+    image: '65.png',
     resolution: '4K Ultra HD (3840x2160)',
     panelType: 'Frameless Quantum Dot Panel',
     smartOS: 'Google TV UI (Dolby Atmos / Vision)',
@@ -130,7 +130,7 @@ export const tvCatalogData: TVItem[] = [
     name: '75 Inch Smart TV',
     size: '75"',
     category: 'Ultra 4K',
-    image: '/75.png',
+    image: '75.png',
     resolution: '4K Ultra HD (3840x2160)',
     panelType: 'IPS Super Panel with local dimming',
     smartOS: 'Google TV UI (120Hz Refresh support)',
@@ -143,7 +143,7 @@ export const tvCatalogData: TVItem[] = [
     name: '80/85 Inch Smart TV',
     size: '80"',
     category: 'Ultra 4K',
-    image: '/80.png',
+    image: '80.png',
     resolution: '4K UHD Cinema Display',
     panelType: 'Gold-Standard QLED Screen',
     smartOS: 'Google TV UI with Cinematic Audio',
@@ -222,7 +222,7 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
                   <div className="relative h-44 rounded-xl bg-[#FAF8F5] border border-accent/5 p-4 flex items-center justify-center overflow-hidden mb-5">
                     <img
                       loading="lazy"
-                      src={tv.image}
+                      src={import.meta.env.BASE_URL + tv.image}
                       alt={tv.name}
                       className="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.15)] group-hover:scale-105 transition-transform duration-500"
                     />
