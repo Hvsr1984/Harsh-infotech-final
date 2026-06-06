@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Harsh-infotech-final/',
+  base: process.env.GITHUB_ACTIONS ? '/Harsh-infotech-final/' : '/',
   plugins: [react()],
   server: {
     port: 5173,
