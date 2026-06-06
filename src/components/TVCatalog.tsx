@@ -219,12 +219,12 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
               >
                 <div>
                   {/* Image Container */}
-                  <div className="relative h-44 rounded-xl bg-[#FAF8F5] border border-accent/5 p-4 flex items-center justify-center overflow-hidden mb-5">
+                  <div className="relative h-44 rounded-xl border border-accent/5 overflow-hidden mb-5">
                     <img
                       loading="lazy"
                       src={import.meta.env.BASE_URL + tv.image}
                       alt={tv.name}
-                      className="max-h-full max-w-full object-contain filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.15)] group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover filter drop-shadow-[0_8px_16px_rgba(0,0,0,0.15)] group-hover:scale-105 transition-transform duration-500"
                     />
 
                     {/* Size tag */}
