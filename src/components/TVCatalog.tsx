@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Eye, ShieldCheck, Truck, Wrench, HeartHandshake, HelpCircle } from 'lucide-react';
+import { ShoppingBag, Eye, ShieldCheck, Truck, Wrench, HeartHandshake, HelpCircle, Sparkles, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export interface TVItem {
@@ -350,6 +350,66 @@ export default function TVCatalog({ onSelectTV }: TVCatalogProps) {
                 Owner: Jitender Singh
               </div>
             </div>
+
+            {/* Royal Welcome Note Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ y: -4 }}
+              className="relative border border-accent/15 bg-white rounded-3xl p-6 shadow-sm overflow-hidden group select-none"
+            >
+              {/* Dynamic glowing background elements */}
+              <div className="absolute -top-10 -right-10 w-24 h-24 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-colors duration-500" />
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-accentGold/5 rounded-full blur-xl group-hover:bg-accentGold/10 transition-colors duration-500" />
+              
+              {/* Gold & Red gradient border accent */}
+              <div className="absolute top-0 bottom-0 left-0 w-1 bg-gradient-to-b from-accent via-accentGold to-accent" />
+
+              <div className="flex items-center space-x-2.5 mb-4">
+                <Sparkles className="w-4 h-4 text-accent animate-pulse" />
+                <span className="text-accent font-poppins font-black text-[10px] uppercase tracking-[0.2em] block">
+                  A Royal Welcome
+                </span>
+              </div>
+
+              <h4 className="font-cinzel font-bold text-lg text-textDark mb-3 leading-tight">
+                Quality Beyond Compare
+              </h4>
+              
+              <p className="text-textMuted text-xs leading-relaxed font-medium mb-4">
+                Step into the future of smart entertainment. At Harsh Infotech, we combine cutting-edge display technology with traditional trust, ensuring every client receives tailored premium solutions.
+              </p>
+
+              {/* Padharo Mhare Des welcome statement */}
+              <div className="bg-[#FAF8F5] border border-accent/5 rounded-2xl p-4 relative overflow-hidden shadow-inner">
+                <div className="absolute -right-3 -bottom-5 text-accent/5 text-5xl select-none font-cinzel font-black">
+                  HI
+                </div>
+                <p className="text-accent font-cinzel font-extrabold text-[10px] uppercase tracking-wider leading-relaxed">
+                  "Padharo Mhare Des — We promise verified quality, doorstep testing, and lifelong support."
+                </p>
+              </div>
+
+              {/* Stats badges */}
+              <div className="grid grid-cols-2 gap-3 mt-5 pt-4 border-t border-accent/5 text-center">
+                <div className="bg-[#FAF8F5] rounded-xl p-2.5 border border-accent/5 hover:border-accent/15 transition-all duration-300">
+                  <div className="flex justify-center mb-1 text-accent">
+                    <Award className="w-3.5 h-3.5" />
+                  </div>
+                  <span className="text-textDark font-poppins font-black text-xs block leading-none">5000+</span>
+                  <span className="text-textMuted text-[8px] font-bold uppercase tracking-wider block mt-1.5 leading-none">Happy Homes</span>
+                </div>
+                <div className="bg-[#FAF8F5] rounded-xl p-2.5 border border-accent/5 hover:border-accent/15 transition-all duration-300">
+                  <div className="flex justify-center mb-1 text-accent">
+                    <HeartHandshake className="w-3.5 h-3.5" />
+                  </div>
+                  <span className="text-textDark font-poppins font-black text-xs block leading-none">100%</span>
+                  <span className="text-textMuted text-[8px] font-bold uppercase tracking-wider block mt-1.5 leading-none">Satisfaction</span>
+                </div>
+              </div>
+            </motion.div>
 
           </div>
 
